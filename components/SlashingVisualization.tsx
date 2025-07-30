@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowDown, ArrowRight, Flame, Users, Shield, DollarSign, Zap, CheckCircle, Building2, TrendingUp, AlertTriangle } from "lucide-react"
+import { ArrowDown, ArrowRight, Flame, Users, Shield, DollarSign, Zap, CheckCircle, Building2, TrendingUp, AlertTriangle, ExternalLink } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export default function SlashingVisualization() {
@@ -19,11 +19,22 @@ export default function SlashingVisualization() {
             <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full animate-pulse"></div>
             <span className="text-sm font-semibold text-slate-700 tracking-wide">EigenLayer Protocol</span>
           </div>
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent mb-6 leading-tight">
-            EigenLayer Redistribution
-          </h1>
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent leading-tight">
+              EigenLayer Redistribution
+            </h1>
+            <a 
+              href="https://docs.eigencloud.xyz/products/eigenlayer/concepts/slashing/redistribution" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-slate-50 to-indigo-50 hover:from-slate-100 hover:to-indigo-100 border border-slate-200/60 rounded-full text-base font-medium text-slate-700 hover:text-slate-800 transition-all duration-200 hover:shadow-md hover:scale-105 group"
+            >
+              <span>Docs</span>
+              <ExternalLink className="h-4 w-4 group-hover:rotate-12 transition-transform duration-200" />
+            </a>
+          </div>
           <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            Compare how both successful operations and slashing scenarios work in traditional vs EigenLayer's redistribution model
+            Compare how both successful operations and slashing scenarios work in traditional vs EigenLayer's redistribution model.
           </p>
         </div>
 
@@ -41,7 +52,7 @@ export default function SlashingVisualization() {
                 <Badge className="bg-orange-100 text-orange-700 border-orange-200">Success + Burning</Badge>
               </div>
               <CardDescription className="text-base leading-relaxed">
-                Stakers delegate to operators who provide services to AVS. Success brings rewards, but slashed funds are permanently destroyed when operators fail
+                Stakers delegate to operators who provide services to AVS. Success brings rewards, but slashed funds are permanently destroyed when operators fail.
               </CardDescription>
             </CardHeader>
             <CardContent className="flex-grow flex flex-col justify-between space-y-4 relative z-10">
@@ -138,7 +149,7 @@ export default function SlashingVisualization() {
                 <Badge className="bg-purple-100 text-purple-700 border-purple-200">Success + Redistribution</Badge>
               </div>
               <CardDescription className="text-base leading-relaxed">
-                Stakers delegate to operators who provide services to AVS. Success brings rewards, and AVS can redirect slashed funds to compensate harmed parties
+                Stakers delegate to operators who provide services to AVS. Success brings rewards, and AVS can redirect slashed funds to compensate harmed parties.
               </CardDescription>
             </CardHeader>
             <CardContent className="flex-grow flex flex-col justify-between space-y-4 relative z-10">
@@ -238,7 +249,7 @@ export default function SlashingVisualization() {
           <CardHeader>
             <CardTitle>Key Benefits of Redistribution</CardTitle>
             <CardDescription>
-              EigenLayer's redistribution mechanism enables new use cases and improves capital efficiency
+              EigenLayer Redistribution enables new use cases and improves capital efficiency.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -274,9 +285,20 @@ export default function SlashingVisualization() {
               <Zap className="h-4 w-4 text-indigo-600" />
               <span className="text-sm font-semibold text-indigo-800 tracking-wide">Powered by Redistribution</span>
             </div>
-            <CardTitle className="text-3xl font-bold bg-gradient-to-r from-indigo-900 via-purple-800 to-indigo-900 bg-clip-text text-transparent mb-4">
-              Use Cases Enabled by Redistribution
-            </CardTitle>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-indigo-900 via-purple-800 to-indigo-900 bg-clip-text text-transparent">
+                Use Cases Enabled by Redistribution
+              </CardTitle>
+              <a 
+                href="https://docs.eigencloud.xyz/products/eigenlayer/concepts/slashing/redistribution" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 border border-indigo-200/60 rounded-full text-sm font-medium text-indigo-700 hover:text-indigo-800 transition-all duration-200 hover:shadow-md hover:scale-105 group"
+              >
+                <span>Docs</span>
+                <ExternalLink className="h-3.5 w-3.5 group-hover:rotate-12 transition-transform duration-200" />
+              </a>
+            </div>
             <CardDescription className="text-lg text-slate-600 max-w-2xl mx-auto">
               Real-world applications that benefit from redistributable slashing mechanisms
             </CardDescription>
@@ -387,9 +409,20 @@ export default function SlashingVisualization() {
               <Building2 className="h-4 w-4 text-blue-600" />
               <span className="text-sm font-semibold text-blue-800 tracking-wide">Real-World Implementation</span>
             </div>
-            <CardTitle className="text-4xl font-bold bg-gradient-to-r from-blue-900 via-indigo-800 to-blue-900 bg-clip-text text-transparent mb-4">
-              Cap Protocol: Redistribution in Action
-            </CardTitle>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <CardTitle className="text-4xl font-bold bg-gradient-to-r from-blue-900 via-indigo-800 to-blue-900 bg-clip-text text-transparent">
+                Cap Protocol: Redistribution in Action
+              </CardTitle>
+              <a 
+                href="https://x.com/capmoney_" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border border-blue-200/60 rounded-full text-sm font-medium text-blue-700 hover:text-blue-800 transition-all duration-200 hover:shadow-md hover:scale-105 group"
+              >
+                <span>Learn more</span>
+                <ExternalLink className="h-3.5 w-3.5 group-hover:rotate-12 transition-transform duration-200" />
+              </a>
+            </div>
             <CardDescription className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
               The first stablecoin with credible financial guarantees using EigenLayer's redistribution mechanism
             </CardDescription>
