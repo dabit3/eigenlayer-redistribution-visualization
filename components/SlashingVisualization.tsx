@@ -16,7 +16,12 @@ export default function SlashingVisualization() {
       <div className="max-w-7xl mx-auto">
         <div className="pt-10 text-center mb-12">
           <div className="inline-flex items-center gap-3 bg-white/70 backdrop-blur-sm px-6 py-3 rounded-full border-2 mb-6" style={{borderColor: '#B7C0E9'}}>
-            <div className="w-2 h-2 rounded-full animate-pulse" style={{background: 'linear-gradient(to right, #1A0C6D, #423DDB)'}}></div>
+            <img 
+              src="/eigenlayer-logo.svg" 
+              alt="EigenLayer Logo" 
+              className="w-5 h-5 opacity-80"
+              style={{filter: 'brightness(0) saturate(100%) invert(8%) sepia(33%) saturate(4766%) hue-rotate(233deg) brightness(93%) contrast(101%)'}}
+            />
             <span className="text-sm font-semibold tracking-wide" style={{color: '#020F2C'}}>EigenLayer Protocol</span>
           </div>
           <div className="flex items-center justify-center gap-4 mb-6">
