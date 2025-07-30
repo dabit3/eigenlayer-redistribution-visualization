@@ -12,28 +12,41 @@ export default function SlashingVisualization() {
   const redistributionAnimating = true
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-slate-50 p-8" style={{background: 'linear-gradient(to bottom right, #f0f4ff, #ffffff, #f8fafc)'}}>
       <div className="max-w-7xl mx-auto">
         <div className="pt-10 text-center mb-12">
-          <div className="inline-flex items-center gap-3 bg-white/70 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-200/50 mb-6">
-            <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold text-slate-700 tracking-wide">EigenLayer Protocol</span>
+          <div className="inline-flex items-center gap-3 bg-white/70 backdrop-blur-sm px-6 py-3 rounded-full border-2 mb-6" style={{borderColor: '#B7C0E9'}}>
+            <div className="w-2 h-2 rounded-full animate-pulse" style={{background: 'linear-gradient(to right, #1A0C6D, #423DDB)'}}></div>
+            <span className="text-sm font-semibold tracking-wide" style={{color: '#020F2C'}}>EigenLayer Protocol</span>
           </div>
           <div className="flex items-center justify-center gap-4 mb-6">
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-5xl font-bold leading-tight" style={{background: 'linear-gradient(to right, #020F2C, #1A0C6D, #020F2C)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
               EigenLayer Redistribution
             </h1>
             <a 
               href="https://docs.eigencloud.xyz/products/eigenlayer/concepts/slashing/redistribution" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-slate-50 to-indigo-50 hover:from-slate-100 hover:to-indigo-100 border border-slate-200/60 rounded-full text-base font-medium text-slate-700 hover:text-slate-800 transition-all duration-200 hover:shadow-md hover:scale-105 group"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group"
+              style={{
+                background: 'linear-gradient(to right, #f8fafc, rgba(183, 192, 233, 0.1))',
+                border: '1px solid #B7C0E9',
+                color: '#020F2C'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'linear-gradient(to right, #f1f5f9, rgba(183, 192, 233, 0.2))';
+                e.currentTarget.style.color = '#1A0C6D';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'linear-gradient(to right, #f8fafc, rgba(183, 192, 233, 0.1))';
+                e.currentTarget.style.color = '#020F2C';
+              }}
             >
               <span>Docs</span>
               <ExternalLink className="h-4 w-4 group-hover:rotate-12 transition-transform duration-200" />
             </a>
           </div>
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl max-w-4xl mx-auto leading-relaxed" style={{color: '#020F2C'}}>
             Compare how both successful operations and slashing scenarios work in traditional vs EigenLayer's redistribution model.
           </p>
         </div>
@@ -279,27 +292,40 @@ export default function SlashingVisualization() {
           </CardContent>
         </Card>
 
-        <Card className="mb-12 bg-gradient-to-br from-white to-indigo-50/30 border-indigo-200/50 shadow-xl">
+        <Card className="mb-12 shadow-xl" style={{background: 'linear-gradient(to bottom right, #ffffff, rgba(183, 192, 233, 0.05))', border: '1px solid #B7C0E9'}}>
           <CardHeader className="text-center pb-8">
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-100 to-purple-100 px-6 py-3 rounded-full border border-indigo-200/50 mb-4 mx-auto">
-              <Zap className="h-4 w-4 text-indigo-600" />
-              <span className="text-sm font-semibold text-indigo-800 tracking-wide">Powered by Redistribution</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border-2 mb-4 mx-auto" style={{background: 'linear-gradient(to right, rgba(26, 12, 109, 0.05), rgba(66, 61, 219, 0.05))', borderColor: '#B7C0E9'}}>
+              <Zap className="h-4 w-4" style={{color: '#1A0C6D'}} />
+              <span className="text-sm font-semibold tracking-wide" style={{color: '#020F2C'}}>Powered by Redistribution</span>
             </div>
             <div className="flex items-center justify-center gap-3 mb-4">
-              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-indigo-900 via-purple-800 to-indigo-900 bg-clip-text text-transparent">
+              <CardTitle className="text-3xl font-bold" style={{background: 'linear-gradient(to right, #020F2C, #1A0C6D, #423DDB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
                 Use Cases Enabled by Redistribution
               </CardTitle>
               <a 
                 href="https://docs.eigencloud.xyz/products/eigenlayer/concepts/slashing/redistribution" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 border border-indigo-200/60 rounded-full text-sm font-medium text-indigo-700 hover:text-indigo-800 transition-all duration-200 hover:shadow-md hover:scale-105 group"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group"
+                style={{
+                  background: 'linear-gradient(to right, rgba(183, 192, 233, 0.1), rgba(87, 132, 255, 0.1))',
+                  border: '1px solid #B7C0E9',
+                  color: '#1A0C6D'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, rgba(183, 192, 233, 0.2), rgba(87, 132, 255, 0.2))';
+                  e.currentTarget.style.color = '#020F2C';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, rgba(183, 192, 233, 0.1), rgba(87, 132, 255, 0.1))';
+                  e.currentTarget.style.color = '#1A0C6D';
+                }}
               >
                 <span>Docs</span>
                 <ExternalLink className="h-3.5 w-3.5 group-hover:rotate-12 transition-transform duration-200" />
               </a>
             </div>
-            <CardDescription className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <CardDescription className="text-lg max-w-2xl mx-auto" style={{color: '#020F2C'}}>
               Real-world applications that benefit from redistributable slashing mechanisms
             </CardDescription>
           </CardHeader>
@@ -403,27 +429,40 @@ export default function SlashingVisualization() {
         </Card>
 
         {/* Cap Implementation Section */}
-        <Card className="mb-16 bg-gradient-to-br from-white to-blue-50/30 border-blue-200/50 shadow-xl">
+        <Card className="mb-16 shadow-xl" style={{background: 'linear-gradient(to bottom right, #ffffff, rgba(87, 132, 255, 0.05))', border: '1px solid #5784FF'}}>
           <CardHeader className="text-center pb-8">
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-100 to-indigo-100 px-6 py-3 rounded-full border border-blue-200/50 mb-6 mx-auto">
-              <Building2 className="h-4 w-4 text-blue-600" />
-              <span className="text-sm font-semibold text-blue-800 tracking-wide">Real-World Implementation</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border-2 mb-6 mx-auto" style={{background: 'linear-gradient(to right, rgba(87, 132, 255, 0.05), rgba(66, 61, 219, 0.05))', borderColor: '#5784FF'}}>
+              <Building2 className="h-4 w-4" style={{color: '#423DDB'}} />
+              <span className="text-sm font-semibold tracking-wide" style={{color: '#020F2C'}}>Real-World Implementation</span>
             </div>
             <div className="flex items-center justify-center gap-3 mb-4">
-              <CardTitle className="text-4xl font-bold bg-gradient-to-r from-blue-900 via-indigo-800 to-blue-900 bg-clip-text text-transparent">
+              <CardTitle className="text-4xl font-bold" style={{background: 'linear-gradient(to right, #020F2C, #423DDB, #5784FF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
                 Cap Protocol: Redistribution in Action
               </CardTitle>
               <a 
                 href="https://x.com/capmoney_" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border border-blue-200/60 rounded-full text-sm font-medium text-blue-700 hover:text-blue-800 transition-all duration-200 hover:shadow-md hover:scale-105 group"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group"
+                style={{
+                  background: 'linear-gradient(to right, rgba(87, 132, 255, 0.1), rgba(66, 61, 219, 0.1))',
+                  border: '1px solid #5784FF',
+                  color: '#423DDB'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, rgba(87, 132, 255, 0.2), rgba(66, 61, 219, 0.2))';
+                  e.currentTarget.style.color = '#020F2C';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, rgba(87, 132, 255, 0.1), rgba(66, 61, 219, 0.1))';
+                  e.currentTarget.style.color = '#423DDB';
+                }}
               >
                 <span>Learn more</span>
                 <ExternalLink className="h-3.5 w-3.5 group-hover:rotate-12 transition-transform duration-200" />
               </a>
             </div>
-            <CardDescription className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
+            <CardDescription className="text-lg max-w-3xl mx-auto leading-relaxed mb-8" style={{color: '#020F2C'}}>
               The first stablecoin with credible financial guarantees using EigenLayer's redistribution mechanism
             </CardDescription>
             
