@@ -20,7 +20,7 @@ export default function SlashingVisualization() {
             <span className="text-sm font-semibold tracking-wide" style={{color: '#020F2C'}}>EigenLayer Protocol</span>
           </div>
           <div className="flex items-center justify-center gap-4 mb-6">
-            <h1 className="text-5xl font-bold leading-tight" style={{background: 'linear-gradient(to right, #020F2C, #1A0C6D, #020F2C)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+            <h1 className="text-5xl font-bold leading-tight" style={{background: 'linear-gradient(to right, #4f46e5, #6366f1, #5b21b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
               EigenLayer Redistribution
             </h1>
             <a 
@@ -299,7 +299,7 @@ export default function SlashingVisualization() {
               <span className="text-sm font-semibold tracking-wide" style={{color: '#020F2C'}}>Powered by Redistribution</span>
             </div>
             <div className="flex items-center justify-center gap-3 mb-4">
-              <CardTitle className="text-3xl font-bold" style={{background: 'linear-gradient(to right, #020F2C, #1A0C6D, #423DDB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+              <CardTitle className="text-3xl font-bold" style={{background: 'linear-gradient(to right, #5b21b6, #6366f1, #4f46e5)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
                 Use Cases Enabled by Redistribution
               </CardTitle>
               <a 
@@ -436,7 +436,7 @@ export default function SlashingVisualization() {
               <span className="text-sm font-semibold tracking-wide" style={{color: '#020F2C'}}>Real-World Implementation</span>
             </div>
             <div className="flex items-center justify-center gap-3 mb-4">
-              <CardTitle className="text-4xl font-bold" style={{background: 'linear-gradient(to right, #020F2C, #423DDB, #5784FF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+              <CardTitle className="text-4xl font-bold" style={{background: 'linear-gradient(to right, #6366f1, #4f46e5, #5b21b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
                 Cap Protocol: Redistribution in Action
               </CardTitle>
               <a 
