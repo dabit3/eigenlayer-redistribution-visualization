@@ -12,7 +12,10 @@ export default function SlashingVisualization() {
   const redistributionAnimating = true
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-slate-50 p-8" style={{background: 'linear-gradient(to bottom right, #f0f4ff, #ffffff, #f8fafc)'}}>
+    <div className="
+    min-h-screen bg-gradient-to-br from-blue-50 via-white to-slate-50 p-4
+    md:p-8
+    " style={{background: 'linear-gradient(to bottom right, #f0f4ff, #ffffff, #f8fafc)'}}>
       <div className="max-w-7xl mx-auto">
         <div className="pt-10 text-center mb-12">
           <div className="inline-flex items-center gap-3 bg-white/70 backdrop-blur-sm px-6 py-3 rounded-full border-2 mb-6" style={{borderColor: '#B7C0E9'}}>
@@ -24,15 +27,23 @@ export default function SlashingVisualization() {
             />
             <span className="text-sm font-semibold tracking-wide" style={{color: '#020F2C'}}>EigenLayer Protocol</span>
           </div>
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <h1 className="text-5xl font-bold leading-tight" style={{background: 'linear-gradient(to right, #3730a3, #4338ca, #581c87)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+          <div className="
+          flex items-center justify-center gap-4 mb-2
+          md:mb-6
+          ">
+            <h1 className="
+            text-5xl font-bold leading-tight
+            " style={{background: 'linear-gradient(to right, #3730a3, #4338ca, #581c87)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
               EigenLayer Redistribution
             </h1>
             <a 
               href="https://docs.eigencloud.xyz/products/eigenlayer/concepts/slashing/redistribution" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group"
+              className="items-center gap-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group
+              hidden
+              md:inline-flex 
+              "
               style={{
                 background: 'linear-gradient(to right, #f8fafc, rgba(183, 192, 233, 0.1))',
                 border: '1px solid #B7C0E9',
@@ -51,6 +62,32 @@ export default function SlashingVisualization() {
               <ExternalLink className="h-4 w-4 group-hover:rotate-12 transition-transform duration-200" />
             </a>
           </div>
+          <a 
+              href="https://docs.eigencloud.xyz/products/eigenlayer/concepts/slashing/redistribution" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="items-center gap-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group
+              inline-flex 
+              md:hidden
+              mb-4
+              "
+              style={{
+                background: 'linear-gradient(to right, #f8fafc, rgba(183, 192, 233, 0.1))',
+                border: '1px solid #B7C0E9',
+                color: '#020F2C'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'linear-gradient(to right, #f1f5f9, rgba(183, 192, 233, 0.2))';
+                e.currentTarget.style.color = '#1A0C6D';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'linear-gradient(to right, #f8fafc, rgba(183, 192, 233, 0.1))';
+                e.currentTarget.style.color = '#020F2C';
+              }}
+            >
+              <span>Docs</span>
+              <ExternalLink className="h-4 w-4 group-hover:rotate-12 transition-transform duration-200" />
+            </a>
           <p className="text-xl max-w-4xl mx-auto leading-relaxed" style={{color: '#020F2C'}}>
             Compare how both successful operations and slashing scenarios work in traditional vs EigenLayer's redistribution model.
           </p>
@@ -303,15 +340,25 @@ export default function SlashingVisualization() {
               <Zap className="h-4 w-4" style={{color: '#1A0C6D'}} />
               <span className="text-sm font-semibold tracking-wide" style={{color: '#020F2C'}}>Powered by Redistribution</span>
             </div>
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <CardTitle className="text-3xl font-bold" style={{background: 'linear-gradient(to right, #581c87, #4338ca, #3730a3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+            <div className="flex items-center justify-center gap-3 
+            mb-2
+            sm:mb-4
+            mx-auto">
+              <CardTitle
+              className="
+              text-3xl font-bold
+              
+              " style={{background: 'linear-gradient(to right, #581c87, #4338ca, #3730a3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
                 Use Cases Enabled by Redistribution
               </CardTitle>
               <a 
                 href="https://docs.eigencloud.xyz/products/eigenlayer/concepts/slashing/redistribution" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group"
+                className="
+                items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group
+                hidden md:inline-flex
+                "
                 style={{
                   background: 'linear-gradient(to right, rgba(183, 192, 233, 0.1), rgba(87, 132, 255, 0.1))',
                   border: '1px solid #B7C0E9',
@@ -327,10 +374,46 @@ export default function SlashingVisualization() {
                 }}
               >
                 <span>Docs</span>
-                <ExternalLink className="h-3.5 w-3.5 group-hover:rotate-12 transition-transform duration-200" />
+                <ExternalLink
+                className="h-3.5 w-3.5 group-hover:rotate-12 transition-transform duration-200" />
               </a>
             </div>
-            <CardDescription className="text-lg max-w-2xl mx-auto" style={{color: '#020F2C'}}>
+            <a 
+                href="https://docs.eigencloud.xyz/products/eigenlayer/concepts/slashing/redistribution" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="
+                items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group
+                md:hidden inline-flex
+                justify-center flex
+                w-[100px]
+                justify-center items-center flex
+                mx-auto
+                "
+                style={{
+                  background: 'linear-gradient(to right, rgba(183, 192, 233, 0.1), rgba(87, 132, 255, 0.1))',
+                  border: '1px solid #B7C0E9',
+                  color: '#1A0C6D'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, rgba(183, 192, 233, 0.2), rgba(87, 132, 255, 0.2))';
+                  e.currentTarget.style.color = '#020F2C';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, rgba(183, 192, 233, 0.1), rgba(87, 132, 255, 0.1))';
+                  e.currentTarget.style.color = '#1A0C6D';
+                }}
+              >
+                <span>Docs</span>
+                <ExternalLink
+                className="h-3.5 w-3.5 group-hover:rotate-12 transition-transform duration-200" />
+              </a>
+           
+            <CardDescription className="
+            text-lg max-w-2xl mx-auto
+            mt-4
+            md:mt-0
+            " style={{color: '#020F2C'}}>
               Real-world applications that benefit from redistributable slashing mechanisms
             </CardDescription>
           </CardHeader>
