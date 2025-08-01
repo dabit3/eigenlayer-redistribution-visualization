@@ -527,11 +527,14 @@ export default function SlashingVisualization() {
               <CardTitle className="text-4xl font-bold" style={{background: 'linear-gradient(to right, #4338ca, #3730a3, #581c87)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
                 Cap Protocol: Redistribution in Action
               </CardTitle>
-              <a 
-                href="https://x.com/capmoney_" 
-                target="_blank" 
+              <a
+                href="https://x.com/capmoney_"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group"
+                className="
+                items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group
+                hidden md:inline-flex
+                "
                 style={{
                   background: 'linear-gradient(to right, rgba(87, 132, 255, 0.1), rgba(66, 61, 219, 0.1))',
                   border: '1px solid #5784FF',
@@ -550,6 +553,35 @@ export default function SlashingVisualization() {
                 <ExternalLink className="h-3.5 w-3.5 group-hover:rotate-12 transition-transform duration-200" />
               </a>
             </div>
+            <a
+                href="https://x.com/capmoney_" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="
+                items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md hover:scale-105 group
+                md:hidden inline-flex
+                justify-center
+                w-[150px]
+                mx-auto
+                mb-2
+                "
+                style={{
+                  background: 'linear-gradient(to right, rgba(87, 132, 255, 0.1), rgba(66, 61, 219, 0.1))',
+                  border: '1px solid #5784FF',
+                  color: '#423DDB'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, rgba(87, 132, 255, 0.2), rgba(66, 61, 219, 0.2))';
+                  e.currentTarget.style.color = '#020F2C';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, rgba(87, 132, 255, 0.1), rgba(66, 61, 219, 0.1))';
+                  e.currentTarget.style.color = '#423DDB';
+                }}
+              >
+                <span>Learn more</span>
+                <ExternalLink className="h-3.5 w-3.5 group-hover:rotate-12 transition-transform duration-200" />
+              </a>
             <CardDescription className="text-lg max-w-3xl mx-auto leading-relaxed mb-8" style={{color: '#020F2C'}}>
               The first stablecoin with credible financial guarantees using EigenLayer's redistribution mechanism
             </CardDescription>
