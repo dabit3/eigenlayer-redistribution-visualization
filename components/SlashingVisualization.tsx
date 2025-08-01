@@ -89,7 +89,7 @@ export default function SlashingVisualization() {
               <ExternalLink className="h-4 w-4 group-hover:rotate-12 transition-transform duration-200" />
             </a>
           <p className="text-xl max-w-4xl mx-auto leading-relaxed" style={{color: '#020F2C'}}>
-            Compare how both successful operations and slashing scenarios work in traditional vs EigenLayer's redistribution model.
+          Redistribution allows protocols to redirect penalized funds from misbehaving validators to compensate affected parties, rather than destroying the funds, enabling new use cases like lending and insurance services that need to make victims whole when things go wrong.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function SlashingVisualization() {
                   <div className="p-2 bg-orange-100 rounded-lg">
                     <Flame className="h-5 w-5 text-orange-600" />
                   </div>
-                  Traditional Model
+                  Traditional slashing
                 </CardTitle>
                 <Badge className="bg-orange-100 text-orange-700 border-orange-200">Success + Burning</Badge>
               </div>
@@ -199,7 +199,7 @@ export default function SlashingVisualization() {
                   <div className="p-2 bg-purple-100 rounded-lg">
                     <Zap className="h-5 w-5 text-purple-600" />
                   </div>
-                  Redistribution Model
+                  Redistribution 
                 </CardTitle>
                 <Badge className="bg-purple-100 text-purple-700 border-purple-200">Success + Redistribution</Badge>
               </div>
