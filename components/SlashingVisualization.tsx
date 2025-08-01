@@ -709,6 +709,234 @@ export default function SlashingVisualization() {
               </div>
             </CardContent>
         </Card>
+
+        {/* Risk Assessment Section */}
+        <Card className="mb-16 shadow-xl" style={{background: 'linear-gradient(to bottom right, #ffffff, rgba(220, 38, 38, 0.03))', border: '2px solid #EF4444'}}>
+          <CardHeader className="text-center pb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border-2 mb-6 mx-auto" style={{background: 'linear-gradient(to right, rgba(220, 38, 38, 0.05), rgba(239, 68, 68, 0.05))', borderColor: '#EF4444'}}>
+              <AlertTriangle className="h-4 w-4" style={{color: '#DC2626'}} />
+              <span className="text-sm font-semibold tracking-wide" style={{color: '#020F2C'}}>Risk Assessment</span>
+            </div>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <CardTitle className="text-4xl font-bold" style={{background: 'black', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+                Higher Risk, Higher Reward
+              </CardTitle>
+            </div>
+            <CardDescription className="text-lg max-w-3xl mx-auto leading-relaxed mb-8" style={{color: '#020F2C'}}>
+              Redistributable slashing fundamentally changes risk dynamics. Understanding these risks is essential for stakers and capital allocators.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-8">
+            
+            {/* Core Risk Statement */}
+            <div className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-xl border-2 border-red-200/80 shadow-inner">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-red-100 to-red-200 border-2 border-red-300 shadow-lg mb-4">
+                  <AlertTriangle className="h-8 w-8 text-red-700" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">⚠️ Increased Slashing Incentives</h3>
+                <p className="text-slate-700 max-w-4xl mx-auto leading-relaxed text-lg">
+                  <strong>With redistributable slashing, AVSs can now benefit from slashed funds.</strong> This creates stronger incentives to slash operators, 
+                  potentially leading to more frequent slashing events. Stakers must carefully evaluate this risk-reward tradeoff.
+                </p>
+              </div>
+            </div>
+
+            {/* Risk Categories Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+              {/* For Stakers */}
+              <div className="group relative overflow-hidden bg-gradient-to-br from-red-50 to-red-100/50 border-2 border-red-200/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-red-100 to-red-200 border-2 border-red-300 shadow-lg">
+                      <Users className="h-6 w-6 text-red-700" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-1">Staker Risks</h3>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                        <span className="text-xs font-medium text-red-700 uppercase tracking-wide">HIGHEST IMPACT</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul className="space-y-3 text-sm text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Fund Theft Risk:</strong> Compromised AVS keys can drain allocated stake instead of just burning it</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Malicious Operators:</strong> Compromised operators may create malicious AVSs to slash and steal funds</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Governance Attacks:</strong> Corrupted AVS governance can authorize illegitimate slashing</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Collusion Risk:</strong> Operators and AVSs may collude to redistribute funds inappropriately</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* For Operators */}
+              <div className="group relative overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100/50 border-2 border-orange-200/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-100 to-orange-200 border-2 border-orange-300 shadow-lg">
+                      <Shield className="h-6 w-6 text-orange-700" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-1">Operator Risks</h3>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+                        <span className="text-xs font-medium text-orange-700 uppercase tracking-wide">HIGH IMPACT</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul className="space-y-3 text-sm text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Key Compromise:</strong> Lost keys can enable attackers to register malicious AVSs and steal staker funds</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Reputational Damage:</strong> Being slashed in redistributable sets causes severe trust loss</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Increased Liability:</strong> Higher security requirements and operational complexity</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-4 h-4 mt-0.5 flex-shrink-0 flex items-center justify-center">
+                        <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+                      </div>
+                      <span><strong>Visibility Changes:</strong> Marked as "Redistributable" affecting stake attraction</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* For AVSs */}
+              <div className="group relative overflow-hidden bg-gradient-to-br from-purple-50 to-purple-100/50 border-2 border-purple-200/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-100 to-purple-200 border-2 border-purple-300 shadow-lg">
+                      <Building2 className="h-6 w-6 text-purple-700" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-1">AVS Risks</h3>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+                        <span className="text-xs font-medium text-purple-700 uppercase tracking-wide">MEDIUM IMPACT</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul className="space-y-3 text-sm text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Enhanced Key Management:</strong> Redistribution recipient keys require highest security standards</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Governance Risks:</strong> Must implement robust fraud proofs and veto mechanisms</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Precision Attacks:</strong> Risk of precision loss in small magnitude slashing</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-4 h-4 mt-0.5 flex-shrink-0 flex items-center justify-center">
+                        <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                      </div>
+                      <span><strong>Design Complexity:</strong> Must carefully balance incentives to prevent abuse</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Risk Mitigation */}
+              <div className="group relative overflow-hidden bg-gradient-to-br from-emerald-50 to-emerald-100/50 border-2 border-emerald-200/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-200 border-2 border-emerald-300 shadow-lg">
+                      <CheckCircle className="h-6 w-6 text-emerald-700" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-1">Built-in Protections</h3>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                        <span className="text-xs font-medium text-emerald-700 uppercase tracking-wide">RISK MITIGATION</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul className="space-y-3 text-sm text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Immutable Recipients:</strong> Redistribution addresses cannot be changed after creation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Clear Metadata:</strong> All redistributable operator sets are clearly marked</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Opt-in Only:</strong> Participation requires explicit consent from all parties</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                      <span><strong>Allocation Delays:</strong> Time windows for stakers to react to compromised operators</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Risk Assessment Guide */}
+            <div className="bg-gradient-to-r from-slate-100 via-red-100 to-orange-100 p-8 rounded-2xl border-2 border-slate-200/50">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-100 to-red-200 border-2 border-slate-300 shadow-lg mb-4">
+                  <AlertTriangle className="h-8 w-8 text-red-700" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Risk Assessment Guidelines</h3>
+                <p className="text-slate-700 max-w-3xl mx-auto leading-relaxed">
+                  Before participating in redistributable slashing, conduct thorough due diligence on all parties involved.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-red-100 mx-auto mb-3">
+                    <Users className="h-6 w-6 text-red-600" />
+                  </div>
+                  <h4 className="font-semibold text-slate-800 mb-2">For Stakers</h4>
+                  <p className="text-xs text-slate-600">Carefully evaluate operator reputation, AVS governance, and risk-reward ratios before delegating</p>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-orange-100 mx-auto mb-3">
+                    <Shield className="h-6 w-6 text-orange-600" />
+                  </div>
+                  <h4 className="font-semibold text-slate-800 mb-2">For Operators</h4>
+                  <p className="text-xs text-slate-600">Implement exceptional security practices and only participate in AVSs with robust governance</p>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-purple-100 mx-auto mb-3">
+                    <Building2 className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <h4 className="font-semibold text-slate-800 mb-2">For AVSs</h4>
+                  <p className="text-xs text-slate-600">Design with security-first principles, implement delays, and provide clear transparency</p>
+                </div>
+              </div>
+            </div>
+
+          </CardContent>
+        </Card>
       </div>
     </div>
   )
